@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { Text, Flex, Box } from 'rebass';
 import { StaticQuery, graphql } from 'gatsby';
 import Fade from 'react-reveal/Fade';
+import SimpleIcons from 'simple-icons-react-component';
 import Section from '../components/Section';
 import { SkillCardContainer, Card } from '../components/Card';
 import Triangle from '../components/Triangle';
-import SkillIcon from '../components/SkillIcon';
 
 const Background = () => (
   <div>
@@ -47,7 +47,7 @@ const Skill = ({ skillName, fontAwesomeIcon }) => (
       p={1}
     >
       <Box width={1 / 2}>
-        <SkillIcon skillName={fontAwesomeIcon} />
+        <SimpleIcons name={fontAwesomeIcon} />
       </Box>
       <Text width="100px" textAlign="center">
         {skillName}
