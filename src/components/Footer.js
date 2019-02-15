@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
 import ContentfulLogo from './Logo/Contenful.svg';
 import GatsbyLogo from './Logo/Gatsby.svg';
+import NetlifyLogo from './Logo/Netlify.svg';
 
 const FooterContainer = styled.footer`
   padding: 1em;
@@ -72,6 +73,16 @@ const Footer = () => (
           url="https://www.gatsbyjs.org/"
           logo={GatsbyLogo}
           alt="Gatsby Logo"
+        />
+        <Text m={2} fontSize={4}>
+          <span role="img" aria-label="heart">
+            ❤️
+          </span>
+        </Text>
+        <Logo
+          url="https://www.netlify.com/"
+          logo={NetlifyLogo}
+          alt="Netlify Logo"
         />
       </Flex>
     </Fade>

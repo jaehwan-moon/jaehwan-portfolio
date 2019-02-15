@@ -4,7 +4,7 @@ import { Text, Flex, Box } from 'rebass';
 import { StaticQuery, graphql } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
-import { CardContainer, Card } from '../components/Card';
+import { SkillCardContainer, Card } from '../components/Card';
 import Triangle from '../components/Triangle';
 import SkillIcon from '../components/SkillIcon';
 
@@ -36,20 +36,17 @@ const Background = () => (
 
 const CARD_HEIGHT = '100px';
 
-const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
-
-const Skill = ({
-  skillName,
-  fontAwesomeIcon,
-}) => (
+const Skill = ({ skillName, fontAwesomeIcon }) => (
   <Card p={0}>
-    <Flex 
+    <Flex
       style={{ height: CARD_HEIGHT }}
       flexDirection="column"
-      alignItems="center"t
+      alignItems="center"
+      t
       justifyContent="center"
-      p={1}>
-      <Box width={1/2}>
+      p={1}
+    >
+      <Box width={1 / 2}>
         <SkillIcon skillName={fontAwesomeIcon} />
       </Box>
       <Text width="100px" textAlign="center">
@@ -61,7 +58,7 @@ const Skill = ({
 
 Skill.propTypes = {
   skillName: PropTypes.string.isRequired,
-  fontAwesomeIcon: PropTypes.string.isRequired,  
+  fontAwesomeIcon: PropTypes.string.isRequired,
 };
 
 const Skills = () => (
@@ -80,13 +77,13 @@ const Skills = () => (
         }
       `}
       render={({ contentfulAbout }) => (
-        <CardContainer minWidth="150px">
+        <SkillCardContainer minWidth="150px">
           {contentfulAbout.skills.map((p, i) => (
             <Fade key={p.id} bottom delay={i * 200}>
               <Skill {...p} />
             </Fade>
           ))}
-        </CardContainer>
+        </SkillCardContainer>
       )}
     />
   </Section.Container>

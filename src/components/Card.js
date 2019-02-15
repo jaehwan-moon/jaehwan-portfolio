@@ -16,6 +16,17 @@ export const CardContainer = styled.div`
   }
 `;
 
+export const SkillCardContainer = styled.div`
+  display: grid;
+  grid-gap: 30px;
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(${props => props.minWidth}, 1fr)
+  );
+  justify-items: center;
+`;
+
 export const Card = styled(CardRebass).attrs({
   bg: 'white',
   boxShadow: 0,
