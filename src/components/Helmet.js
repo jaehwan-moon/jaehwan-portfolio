@@ -73,14 +73,7 @@ const Helmet = ({ theme = {} }) => (
             type="image/png"
             sizes="16x16"
             href={profile.favicon16.src}
-          />
-
-          <link
-            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-            rel="stylesheet"
-            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-            crossOrigin="anonymous"
-          />
+          />          
         </ReactHelmet>
       );
     }}
