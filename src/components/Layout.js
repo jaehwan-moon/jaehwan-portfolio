@@ -7,6 +7,12 @@ import config from 'react-reveal/globals';
 import colors from '../../colors';
 import Helmet from './Helmet';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faEnvelope, faGlobe);
+
 const GlobalStyle = createGlobalStyle`
 *,
 *::after,
